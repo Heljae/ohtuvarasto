@@ -69,5 +69,5 @@ class TestVarasto(unittest.TestCase):
 
     def test_kuvaus_varastosta(self):
         mjono = str(self.varasto)
-        vastaus = f"saldo = {0}, vielä tilaa {10}"
+        vastaus = f"saldoo = {0}, vielä tilaa {10}"
         self.assertAlmostEqual(mjono, vastaus)
