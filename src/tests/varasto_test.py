@@ -1,8 +1,11 @@
+"""Module containing tests for the class varasto"""
+
 import unittest
 from varasto import Varasto
 
 
 class TestVarasto(unittest.TestCase):
+    """Class testing Varasto-class"""
     def setUp(self):
         self.varasto = Varasto(10)
 

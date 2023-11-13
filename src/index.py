@@ -1,7 +1,10 @@
+"""Module containing the main program"""
+
 from varasto import Varasto
 
 
 def main():
+    """The main program"""
     mehua = Varasto(100.0)
     olutta = Varasto(100.0, 20.2)
 

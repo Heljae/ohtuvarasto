@@ -1,4 +1,7 @@
+"""Module that has a class for a varasto"""
+
 class Varasto:
+    """The class that is a varasto"""
     def __init__(self, tilavuus, alku_saldo = 0):
         if tilavuus > 0.0:
             self.tilavuus = tilavuus
@@ -18,9 +21,11 @@ class Varasto:
 
     # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
+        """How much of room the varasto has left"""
         return self.tilavuus - self.saldo
 
     def lisaa_varastoon(self, maara):
+        """Adds stuff to varasto"""
         if maara < 0:
             return
         if maara <= self.paljonko_mahtuu():
@@ -29,6 +34,7 @@ class Varasto:
             self.saldo = self.tilavuus
 
     def ota_varastosta(self, maara):
+        """Takes stuff from varasto"""
         if maara < 0:
             return 0.0
         if maara > self.saldo:
